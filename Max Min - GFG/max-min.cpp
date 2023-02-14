@@ -12,8 +12,9 @@ class Solution
    public:
     int findSum(int A[], int N){
     	sort(A,A+N);
-    	int sum=A[0]+A[N-1];
-    	return sum;
+    	int n=A[0];
+    	int m=A[N-1];
+    	return n+m;
     }
 
 };
