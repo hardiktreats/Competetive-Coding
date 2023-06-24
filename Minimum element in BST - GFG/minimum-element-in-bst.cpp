@@ -111,9 +111,9 @@ Node* newNode(int val) {
     return temp;
 }
 */
-int order(Node* root,int mini){
+void order(Node* root,int &mini){
     if(root==NULL){
-        return mini;
+        return ;
     }
     mini=min(mini,root->data);
     order(root->left,mini);
@@ -124,5 +124,6 @@ int minValue(Node* root) {
         return -1;
     }
     int mini=INT_MAX;
-    return order(root,mini);
+    order(root,mini);
+    return mini;
 }
